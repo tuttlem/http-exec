@@ -7,11 +7,11 @@ cabal-version: 2.2
 name:           http-exec
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/http-exec#readme>
-homepage:       https://github.com/githubuser/http-exec#readme
-bug-reports:    https://github.com/githubuser/http-exec/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2024 Author name here
+homepage:       https://github.com/tuttlem/http-exec#readme
+bug-reports:    https://github.com/tuttlem/http-exec/issues
+author:         Michael Tuttle
+maintainer:     tuttlem@gmail.com
+copyright:      2024 Michael Tuttle
 license:        BSD-3-Clause
 license-file:   LICENSE
 build-type:     Simple
@@ -21,7 +21,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/http-exec
+  location: https://github.com/tuttlem/http-exec
 
 executable http-exec-exe
   main-is: Main.hs
@@ -46,19 +46,4 @@ executable http-exec-exe
     , network-uri
     , parsec
     , split
-  default-language: Haskell2010
-
-test-suite http-exec-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_http_exec
-  autogen-modules:
-      Paths_http_exec
-  hs-source-dirs:
-      test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , http-exec
   default-language: Haskell2010
