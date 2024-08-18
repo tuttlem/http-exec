@@ -23,23 +23,12 @@ source-repository head
   type: git
   location: https://github.com/githubuser/http-exec
 
-library
-  exposed-modules:
-      Lib
-  other-modules:
-      Paths_http_exec
-  autogen-modules:
-      Paths_http_exec
-  hs-source-dirs:
-      src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
-  build-depends:
-      base >=4.7 && <5
-  default-language: Haskell2010
-
 executable http-exec-exe
   main-is: Main.hs
   other-modules:
+      Execution
+      Parsing
+      Types
       Paths_http_exec
   autogen-modules:
       Paths_http_exec
@@ -53,7 +42,6 @@ executable http-exec-exe
     , containers
     , http-client
     , http-client-tls
-    , http-exec
     , http-types
     , network-uri
     , parsec
