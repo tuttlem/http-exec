@@ -1,0 +1,11 @@
+# First request
+@host = somehwhere.com
+@contentType = application/json
+
+GET https://${host}/client/ver
+Content-Type: ${contentType}
+
+# Second request
+GET https://${host}/types/ver
+Content-Type: ${contentType}
+
